@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production' ? '/weziweb-digital-agency/' : '/',
+  base: process.env.GITHUB_PAGES ? '/weziweb-digital-agency/' : '/',
   server: {
     port: 3000,
     open: true
