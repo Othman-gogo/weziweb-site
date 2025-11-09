@@ -31,7 +31,9 @@ jobs:
           GITHUB_PAGES: true
 
       - name: List dist contents (debug)
-        run: ls -la dist/
+        run: |
+          ls -la dist/
+          echo "Build completed successfully with GitHub Pages base path"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
