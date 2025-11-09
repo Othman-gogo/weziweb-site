@@ -3,9 +3,10 @@ import { notify } from '../components/enhanced/NotificationSystem'
 import { SIMPLE_CHATBOT_CONFIG } from '../config/simpleConfig.js'
 import { emailService } from './emailService'
 
-// Initialize Google Gemini AI with API key (for browser environment)
+// Initialize Google Gemini AI with API key from environment variables
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || 'AIzaSyDXb7K1vK9ZmK8cJ5fQ9y3H7jL2N6mP0wX4'
 const ai = new GoogleGenAI({
-  apiKey: 'AIzaSyC5VzdC7LpLHfqOLSwC7vBzdTCMPw6Llow'
+  apiKey: API_KEY
 })
 
 class ChatbotService {

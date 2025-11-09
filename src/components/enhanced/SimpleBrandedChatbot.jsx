@@ -3,9 +3,10 @@ import { MessageCircle, X, Send, Bot } from 'lucide-react'
 import { GoogleGenAI } from '@google/genai'
 import { SIMPLE_CHATBOT_CONFIG } from '../../config/simpleConfig'
 
-// Initialize Gemini AI
+// Initialize Gemini AI with environment variable
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY || 'AIzaSyDXb7K1vK9ZmK8cJ5fQ9y3H7jL2N6mP0wX4'
 const ai = new GoogleGenAI({
-  apiKey: 'AIzaSyC5VzdC7LpLHfqOLSwC7vBzdTCMPw6Llow'
+  apiKey: API_KEY
 })
 
 const SimpleBrandedChatbot = () => {
@@ -124,13 +125,13 @@ Provide a helpful response about WeziWeb's services:`
     } catch (error) {
       console.error('AI response error:', error)
       
-      // Smart fallback based on collected data
-      let fallbackMessage = "I'm having connection issues, but I can still help! "
+      // Smart fallback based on collected data - work even without AI connection
+      let fallbackMessage
       
       if (!leadData.name) {
-        fallbackMessage += "What's your name? Then I can tell you about Othman's services."
+        fallbackMessage = "Hey! I'm WeziWeb AI helping Othman connect with clients. What's your name?"
       } else if (!leadData.email) {
-        fallbackMessage += `Hi ${leadData.name}! What's your email so Othman can send you examples of his work?`
+        fallbackMessage = `Nice to meet you ${leadData.name}! What's your email address? Othman will send you his portfolio examples.`
       } else {
         fallbackMessage += `Thanks ${leadData.name}! Othman builds websites, automation, and marketing solutions. Contact: othman.taoufik20000@gmail.com 🚀`
       }
