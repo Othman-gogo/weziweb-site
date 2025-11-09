@@ -439,7 +439,7 @@ const EnhancedConsultation = () => {
                             value={formData.phone}
                             onChange={handleInputChange}
                             className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-wezi-blue-500 transition-all duration-200"
-                            placeholder="+1 (555) 123-4567"
+                            placeholder="+212 666 580 883"
                           />
                         </div>
                         

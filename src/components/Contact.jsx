@@ -14,8 +14,8 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      action: "tel:+15551234567",
+      value: "+212 666 580 883",
+      action: "tel:+212666580883",
       description: "For urgent matters and quick questions"
     },
     {
@@ -38,17 +38,12 @@ const Contact = () => {
     {
       icon: <Linkedin className="w-5 h-5" />,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/othman-taoufik"
-    },
-    {
-      icon: <Twitter className="w-5 h-5" />,
-      name: "Twitter",
-      url: "https://twitter.com/othman_taoufik"
+      url: "https://www.linkedin.com/in/othman-taoufik-b992721a0/"
     },
     {
       icon: <Github className="w-5 h-5" />,
       name: "GitHub",
-      url: "https://github.com/othman-taoufik"
+      url: "https://github.com/Othman-gogo"
     }
   ]
 

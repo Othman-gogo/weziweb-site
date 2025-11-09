@@ -5,7 +5,7 @@ import { notify, notificationPresets } from '../components/enhanced/Notification
 const EMAILJS_SERVICE_ID = 'service_l9ih3ca' // Your actual EmailJS service ID
 const EMAILJS_TEMPLATE_ID = 'template_cxelb0k' // Your actual EmailJS template ID
 const EMAILJS_PUBLIC_KEY = 'mDabFQLvIth7thgGU' // Your actual EmailJS public key
-const ADMIN_EMAIL = 'othman.taoufik20000@gmail.com' // Your working email (matches EmailJS connection)
+const ADMIN_EMAIL = 'othman.taoufik2000@gmail.com' // Your working email for backend data collection
 
 // Initialize EmailJS
 emailjs.init(EMAILJS_PUBLIC_KEY)

@@ -31,17 +31,12 @@ const Footer = () => {
     {
       icon: <Linkedin className="w-5 h-5" />,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/othman-taoufik"
-    },
-    {
-      icon: <Twitter className="w-5 h-5" />,
-      name: "Twitter", 
-      url: "https://twitter.com/othman_taoufik"
+      url: "https://www.linkedin.com/in/othman-taoufik-b992721a0/"
     },
     {
       icon: <Github className="w-5 h-5" />,
       name: "GitHub",
-      url: "https://github.com/othman-taoufik"
+      url: "https://github.com/Othman-gogo"
     }
   ]
 
@@ -90,8 +85,8 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Phone className="w-4 h-4 text-wezi-cyan-500" />
-                  <a href="tel:+15551234567" className="hover:text-white transition-colors duration-200">
-                    +1 (555) 123-4567
+                  <a href="tel:+212666580883" className="hover:text-white transition-colors duration-200">
+                    +212 666 580 883
                   </a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
