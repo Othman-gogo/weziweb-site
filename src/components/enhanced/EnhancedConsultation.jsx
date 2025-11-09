@@ -132,7 +132,9 @@ const EnhancedConsultation = () => {
     setIsLoading(true)
 
     try {
+      console.log('📅 Submitting consultation booking with data:', formData)
       const result = await sendConsultationBooking(formData)
+      console.log('📧 Email result:', result)
       
       if (result.success) {
         setIsSubmitted(true)
