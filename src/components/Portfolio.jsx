@@ -265,12 +265,12 @@ const Portfolio = () => {
 
   // Map real images and galleries to projects
   const imageMap = {
-    1: { image: "/portfolio/techflow-1.png", gallery: ["/portfolio/techflow-1.png", "/portfolio/techflow-2.svg", "/portfolio/techflow-3.svg"] },
-    2: { image: "/portfolio/autolead-1.png", gallery: ["/portfolio/autolead-1.png", "/portfolio/autolead-2.svg", "/portfolio/autolead-3.svg"] },
-    3: { image: "/portfolio/fitlife-1.png", gallery: ["/portfolio/fitlife-1.png", "/portfolio/fitlife-2.svg", "/portfolio/fitlife-3.svg"] },
-    4: { image: "/portfolio/cloudsecure-1.png", gallery: ["/portfolio/cloudsecure-1.png", "/portfolio/cloudsecure-3.svg"] },
-    5: { image: "/portfolio/educonnect-1.png", gallery: ["/portfolio/educonnect-1.png", "/portfolio/educonnect-2.svg", "/portfolio/educonnect-3.svg"] },
-    6: { image: "/portfolio/healthtracker-1.png", gallery: ["/portfolio/healthtracker-1.png", "/portfolio/healthtracker-2.svg", "/portfolio/healthtracker-3.svg"] },
+    1: { image: "/portfolio/techflow-1.svg", gallery: ["/portfolio/techflow-1.svg", "/portfolio/techflow-2.svg", "/portfolio/techflow-3.svg"] },
+    2: { image: "/portfolio/autolead-1.svg", gallery: ["/portfolio/autolead-1.svg", "/portfolio/autolead-2.svg", "/portfolio/autolead-3.svg"] },
+    3: { image: "/portfolio/fitlife-1.svg", gallery: ["/portfolio/fitlife-1.svg", "/portfolio/fitlife-2.svg", "/portfolio/fitlife-3.svg"] },
+    4: { image: "/portfolio/cloudsecure-1.svg", gallery: ["/portfolio/cloudsecure-1.svg", "/portfolio/cloudsecure-3.svg"] },
+    5: { image: "/portfolio/educonnect-1.svg", gallery: ["/portfolio/educonnect-1.svg", "/portfolio/educonnect-2.svg", "/portfolio/educonnect-3.svg"] },
+    6: { image: "/portfolio/healthtracker-1.svg", gallery: ["/portfolio/healthtracker-1.svg", "/portfolio/healthtracker-2.svg", "/portfolio/healthtracker-3.svg"] },
   }
   const projectsWithImages = projects.map(p => ({ ...p, ...(imageMap[p.id] || {}) }))
   const baseProjects = projectsWithImages
