@@ -55,30 +55,21 @@
     -webkit-line-clamp: 3;
   }
 
-  /* Professional infinite scroll animation */
-  @keyframes scroll-infinite {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-33.333%);
-    }
+  /* Mobile carousel scrollbar hide */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 
-  .animate-scroll-infinite {
-    animation: scroll-infinite 45s linear infinite;
-    width: calc(300% + 2rem); /* Account for margins */
-  }
-
-  .animate-scroll-infinite:hover {
-    animation-play-state: paused;
-  }
-
-  /* Ensure smooth infinite scroll without gaps */
+  /* Smooth scroll behavior for mobile carousel */
   @media (max-width: 768px) {
-    .portfolio-carousel {
-      mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
-      -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+    .overflow-x-auto {
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
     }
   }
 }

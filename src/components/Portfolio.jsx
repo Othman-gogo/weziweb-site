@@ -346,23 +346,21 @@ const Portfolio = () => {
           ))}
         </motion.div>
 
-        {/* Mobile Carousel - Professional Infinite Loop */}
+        {/* Mobile Carousel - Touch Swipeable */}
         <div className="md:hidden mb-8">
-          <div className="overflow-hidden portfolio-carousel">
-            <div className="flex animate-scroll-infinite">
-              {/* Triple the projects for seamless infinite scroll */}
-              {[...filteredProjects, ...filteredProjects, ...filteredProjects].map((project, index) => (
-                <div key={`${project.id}-${index}`} className="flex-shrink-0 w-80 mx-3">
+          <div className="overflow-x-auto scrollbar-hide">
+            <div className="flex space-x-4 px-4" style={{scrollSnapType: 'x mandatory'}}>
+              {filteredProjects.map((project, index) => (
+                <div key={project.id} className="flex-shrink-0 w-80" style={{scrollSnapAlign: 'start'}}>
                   <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 h-full">
-                    <div className="relative overflow-hidden h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center border-b">
-                      <div className="text-center">
-                        <div className="text-4xl mb-2">{getProjectIcon(project.id)}</div>
-                        <div className="text-lg font-semibold text-gray-900">{project.title.split(' ')[0]}</div>
-                        <div className="text-sm text-gray-600 mt-1">{project.type}</div>
+                    <div className="relative overflow-hidden h-48">
+                      {project.image && (
+                        <img src={resolveAsset(project.image)} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+                      )}
+                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-700">
+                        {project.type}
                       </div>
-                      <div className="absolute top-4 right-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                        {project.results[0]?.split(':')[1]?.trim() || 'Success'}
-                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-display font-semibold text-gray-900 mb-3 group-hover:text-wezi-blue-500 transition-colors duration-300 line-clamp-2">
@@ -415,15 +413,18 @@ const Portfolio = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500"
             >
-              {/* Project Header - No Images */}
-              <div className="relative overflow-hidden h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center border-b">
-                <div className="text-center">
-                  <div className="text-6xl mb-3">{getProjectIcon(project.id)}</div>
-                  <div className="text-2xl font-bold text-gray-900">{project.title.split(' ')[0]}</div>
-                  <div className="text-sm text-gray-600 mt-1">{project.type}</div>
+              {/* Project Image */}
+              <div className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-green-50 h-48">
+                {project.image && (
+                  <img src={resolveAsset(project.image)} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+                )}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-wezi-gradient rounded-2xl flex items-center justify-center">
+                    <Play className="w-8 h-8 text-white" />
+                  </div>
                 </div>
-                <div className="absolute top-4 right-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                  {project.results[0]?.split(':')[1]?.trim() || 'Success'}
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-700">
+                  {project.type}
                 </div>
               </div>
 
