@@ -332,7 +332,7 @@ const Portfolio = () => {
               <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 mx-2">
                 <div className="relative overflow-hidden h-48">
                   {project.image && (
-                    <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+                    <img src={resolveAsset(project.image)} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
                   )}
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-700">
                     {project.type}
