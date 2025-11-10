@@ -1,1 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600"><rect width="100%" height="100%" fill="#2563eb"/><text x="50%" y="50%" fill="white" font-size="64" font-family="Poppins, Arial" text-anchor="middle" dominant-baseline="middle">FitLife Case 1</text></svg>
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="250" fill="#f8fafc"/>
+  
+  <!-- Phone Frame -->
+  <rect x="150" y="20" width="100" height="210" rx="20" fill="#1f2937" stroke="#374151" stroke-width="2"/>
+  <rect x="160" y="30" width="80" height="190" rx="15" fill="#ffffff"/>
+  
+  <!-- Status Bar -->
+  <rect x="165" y="35" width="70" height="15" fill="#f8fafc"/>
+  <text x="170" y="45" font-family="Arial, sans-serif" font-size="8" fill="#1f2937">9:41</text>
+  <rect x="220" y="38" width="10" height="6" fill="#10b981" rx="1"/>
+  
+  <!-- App Header -->
+  <rect x="165" y="55" width="70" height="30" fill="linear-gradient(to right, #0066FF, #00CCFF)"/>
+  <text x="185" y="70" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white">FitLife</text>
+  <text x="180" y="80" font-family="Arial, sans-serif" font-size="8" fill="white">AI Fitness Coach</text>
+  
+  <!-- Dashboard Cards -->
+  <rect x="170" y="95" width="60" height="25" fill="#10b981" rx="4"/>
+  <text x="175" y="105" font-family="Arial, sans-serif" font-size="7" fill="white">Today's Goal</text>
+  <text x="175" y="113" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="white">8,500 steps</text>
+  
+  <rect x="170" y="125" width="25" height="20" fill="#f59e0b" rx="3"/>
+  <text x="175" y="135" font-family="Arial, sans-serif" font-size="6" fill="white">Calories</text>
+  <text x="175" y="141" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="white">1,240</text>
+  
+  <rect x="200" y="125" width="30" height="20" fill="#8b5cf6" rx="3"/>
+  <text x="205" y="135" font-family="Arial, sans-serif" font-size="6" fill="white">Workout</text>
+  <text x="205" y="141" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="white">45 min</text>
+  
+  <!-- AI Recommendations -->
+  <rect x="170" y="155" width="60" height="40" fill="#f8fafc" stroke="#e2e8f0" rx="4"/>
+  <text x="175" y="165" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="#1f2937">🤖 AI Says:</text>
+  <text x="175" y="173" font-family="Arial, sans-serif" font-size="6" fill="#64748b">Great job today!</text>
+  <text x="175" y="180" font-family="Arial, sans-serif" font-size="6" fill="#64748b">Try 15min HIIT</text>
+  <text x="175" y="187" font-family="Arial, sans-serif" font-size="6" fill="#64748b">next session</text>
+  
+  <!-- Bottom Navigation -->
+  <rect x="165" y="200" width="70" height="15" fill="#f1f5f9"/>
+  <circle cx="175" cy="207" r="3" fill="#0066FF"/>
+  <circle cx="190" cy="207" r="3" fill="#e2e8f0"/>
+  <circle cx="205" cy="207" r="3" fill="#e2e8f0"/>
+  <circle cx="220" cy="207" r="3" fill="#e2e8f0"/>
+  
+  <!-- Side Stats -->
+  <rect x="50" y="80" width="80" height="60" fill="#ffffff" stroke="#e2e8f0" rx="8"/>
+  <text x="55" y="95" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1f2937">App Stats</text>
+  <text x="55" y="108" font-family="Arial, sans-serif" font-size="8" fill="#10b981">50K+ Downloads</text>
+  <text x="55" y="118" font-family="Arial, sans-serif" font-size="8" fill="#f59e0b">4.8⭐ Rating</text>
+  <text x="55" y="128" font-family="Arial, sans-serif" font-size="8" fill="#8b5cf6">85% Retention</text>
+  
+  <rect x="270" y="80" width="80" height="60" fill="#ffffff" stroke="#e2e8f0" rx="8"/>
+  <text x="275" y="95" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1f2937">Features</text>
+  <text x="275" y="108" font-family="Arial, sans-serif" font-size="8" fill="#0066FF">AI Workouts</text>
+  <text x="275" y="118" font-family="Arial, sans-serif" font-size="8" fill="#0066FF">Progress Track</text>
+  <text x="275" y="128" font-family="Arial, sans-serif" font-size="8" fill="#0066FF">Nutrition AI</text>
+  
+  <!-- FitLife Logo -->
+  <circle cx="200" cy="40" r="8" fill="#10b981"/>
+  <text x="195" y="44" font-family="Arial, sans-serif" font-size="7" font-weight="bold" fill="white">FL</text>
+</svg>

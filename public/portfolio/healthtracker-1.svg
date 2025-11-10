@@ -1,1 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600"><rect width="100%" height="100%" fill="#059669"/><text x="50%" y="50%" fill="white" font-size="64" font-family="Poppins, Arial" text-anchor="middle" dominant-baseline="middle">HealthTracker Case 1</text></svg>
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="250" fill="#f8fafc"/>
+  
+  <!-- API Documentation Window -->
+  <rect x="20" y="20" width="360" height="210" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  
+  <!-- Header -->
+  <rect x="20" y="20" width="360" height="35" rx="8" fill="linear-gradient(to right, #059669, #0066FF)"/>
+  <text x="35" y="40" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">HealthTracker API</text>
+  <text x="35" y="48" font-family="Arial, sans-serif" font-size="9" fill="white">HIPAA Compliant Backend Ecosystem</text>
+  
+  <!-- API Endpoints -->
+  <rect x="40" y="70" width="150" height="20" fill="#10b981" opacity="0.1" rx="3"/>
+  <text x="45" y="78" font-family="Courier, monospace" font-size="7" fill="#059669">GET</text>
+  <text x="70" y="78" font-family="Arial, sans-serif" font-size="8" fill="#1f2937">/api/patients</text>
+  <text x="45" y="85" font-family="Arial, sans-serif" font-size="7" fill="#64748b">Retrieve patient data</text>
+  
+  <rect x="200" y="70" width="150" height="20" fill="#0066FF" opacity="0.1" rx="3"/>
+  <text x="205" y="78" font-family="Courier, monospace" font-size="7" fill="#0066FF">POST</text>
+  <text x="230" y="78" font-family="Arial, sans-serif" font-size="8" fill="#1f2937">/api/records</text>
+  <text x="205" y="85" font-family="Arial, sans-serif" font-size="7" fill="#64748b">Create medical record</text>
+  
+  <rect x="40" y="95" width="150" height="20" fill="#f59e0b" opacity="0.1" rx="3"/>
+  <text x="45" y="103" font-family="Courier, monospace" font-size="7" fill="#f59e0b">PUT</text>
+  <text x="70" y="103" font-family="Arial, sans-serif" font-size="8" fill="#1f2937">/api/analytics</text>
+  <text x="45" y="110" font-family="Arial, sans-serif" font-size="7" fill="#64748b">Update analytics data</text>
+  
+  <rect x="200" y="95" width="150" height="20" fill="#ef4444" opacity="0.1" rx="3"/>
+  <text x="205" y="103" font-family="Courier, monospace" font-size="7" fill="#ef4444">DEL</text>
+  <text x="230" y="103" font-family="Arial, sans-serif" font-size="8" fill="#1f2937">/api/sessions</text>
+  <text x="205" y="110" font-family="Arial, sans-serif" font-size="7" fill="#64748b">Secure logout</text>
+  
+  <!-- Response Example -->
+  <rect x="40" y="125" width="310" height="50" fill="#f8fafc" stroke="#e2e8f0" rx="4"/>
+  <text x="45" y="138" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#1f2937">Sample API Response:</text>
+  <text x="45" y="150" font-family="Courier, monospace" font-size="7" fill="#059669">{</text>
+  <text x="50" y="160" font-family="Courier, monospace" font-size="7" fill="#64748b">"status": "success",</text>
+  <text x="50" y="170" font-family="Courier, monospace" font-size="7" fill="#64748b">"data": {...encrypted...}</text>
+  <text x="45" y="180" font-family="Courier, monospace" font-size="7" fill="#059669">}</text>
+  
+  <!-- Performance Metrics -->
+  <rect x="40" y="190" width="90" height="30" fill="#ffffff" stroke="#059669" rx="4"/>
+  <text x="45" y="202" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#059669">🚀 Performance</text>
+  <text x="45" y="212" font-family="Arial, sans-serif" font-size="7" fill="#64748b">Response: &lt;200ms</text>
+  <text x="45" y="220" font-family="Arial, sans-serif" font-size="7" fill="#64748b">Uptime: 99.99%</text>
+  
+  <rect x="140" y="190" width="90" height="30" fill="#ffffff" stroke="#0066FF" rx="4"/>
+  <text x="145" y="202" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#0066FF">🔒 Security</text>
+  <text x="145" y="212" font-family="Arial, sans-serif" font-size="7" fill="#64748b">HIPAA Compliant</text>
+  <text x="145" y="220" font-family="Arial, sans-serif" font-size="7" fill="#64748b">End-to-end encryption</text>
+  
+  <rect x="240" y="190" width="90" height="30" fill="#ffffff" stroke="#8b5cf6" rx="4"/>
+  <text x="245" y="202" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#8b5cf6">📊 Scale</text>
+  <text x="245" y="212" font-family="Arial, sans-serif" font-size="7" fill="#64748b">Microservices</text>
+  <text x="245" y="220" font-family="Arial, sans-serif" font-size="7" fill="#64748b">Auto-scaling</text>
+  
+  <!-- HealthTracker Logo -->
+  <circle cx="350" cy="205" r="15" fill="#059669"/>
+  <text x="342" y="210" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white">HT</text>
+</svg>

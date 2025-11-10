@@ -32,6 +32,7 @@ jobs:
       - name: Build
         env:
           GITHUB_PAGES: true
+          VITE_GEMINI_API_KEY: AIzaSyDZkqbG1lUIYirzskN2rA0Ue8uOfNPOrFU
         run: |
           npm run build:github
           # SPA fallback for Vite

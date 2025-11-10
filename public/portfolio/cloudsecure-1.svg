@@ -1,1 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600"><rect width="100%" height="100%" fill="#0891b2"/><text x="50%" y="50%" fill="white" font-size="64" font-family="Poppins, Arial" text-anchor="middle" dominant-baseline="middle">CloudSecure Case 1</text></svg>
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="250" fill="#f8fafc"/>
+  
+  <!-- Terminal Window -->
+  <rect x="30" y="30" width="340" height="190" rx="8" fill="#1f2937"/>
+  
+  <!-- Terminal Header -->
+  <rect x="30" y="30" width="340" height="25" rx="8" fill="#374151"/>
+  <circle cx="45" cy="42" r="4" fill="#ef4444"/>
+  <circle cx="58" cy="42" r="4" fill="#f59e0b"/>
+  <circle cx="71" cy="42" r="4" fill="#10b981"/>
+  <text x="90" y="47" font-family="Courier, monospace" font-size="10" fill="#e5e7eb">CloudSecure DevOps Pipeline</text>
+  
+  <!-- Terminal Content -->
+  <text x="40" y="70" font-family="Courier, monospace" font-size="9" fill="#10b981">$ kubectl get pods</text>
+  <text x="40" y="85" font-family="Courier, monospace" font-size="8" fill="#e5e7eb">NAME                     READY   STATUS    RESTARTS</text>
+  <text x="40" y="95" font-family="Courier, monospace" font-size="8" fill="#e5e7eb">api-deployment-1         1/1     Running   0</text>
+  <text x="40" y="105" font-family="Courier, monospace" font-size="8" fill="#e5e7eb">frontend-deployment-2    1/1     Running   0</text>
+  <text x="40" y="115" font-family="Courier, monospace" font-size="8" fill="#e5e7eb">database-deployment-1    1/1     Running   0</text>
+  
+  <text x="40" y="135" font-family="Courier, monospace" font-size="9" fill="#10b981">$ docker build -t app:latest .</text>
+  <text x="40" y="150" font-family="Courier, monospace" font-size="8" fill="#00CCFF">Successfully built 7d9c8e1f4a2b</text>
+  <text x="40" y="160" font-family="Courier, monospace" font-size="8" fill="#00CCFF">Successfully tagged app:latest</text>
+  
+  <text x="40" y="180" font-family="Courier, monospace" font-size="9" fill="#10b981">$ terraform apply</text>
+  <text x="40" y="195" font-family="Courier, monospace" font-size="8" fill="#e5e7eb">Apply complete! Resources: 12 added, 0 changed</text>
+  <text x="40" y="205" font-family="Courier, monospace" font-size="8" fill="#10b981">Infrastructure deployment: SUCCESS ✓</text>
+  
+  <!-- Side Panels -->
+  <rect x="20" y="60" width="120" height="80" fill="#ffffff" stroke="#e2e8f0" rx="6"/>
+  <text x="25" y="75" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1f2937">DevOps Metrics</text>
+  <text x="25" y="90" font-family="Arial, sans-serif" font-size="8" fill="#10b981">Deploy Time: 90% ⬇️</text>
+  <text x="25" y="102" font-family="Arial, sans-serif" font-size="8" fill="#0066FF">Zero Downtime ✓</text>
+  <text x="25" y="114" font-family="Arial, sans-serif" font-size="8" fill="#8b5cf6">Bugs: 50% ⬇️</text>
+  <text x="25" y="126" font-family="Arial, sans-serif" font-size="8" fill="#f59e0b">99.99% Uptime</text>
+  
+  <rect x="20" y="150" width="120" height="70" fill="#ffffff" stroke="#e2e8f0" rx="6"/>
+  <text x="25" y="165" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1f2937">Tech Stack</text>
+  <text x="25" y="180" font-family="Arial, sans-serif" font-size="8" fill="#0066FF">🐳 Docker</text>
+  <text x="25" y="192" font-family="Arial, sans-serif" font-size="8" fill="#326ce5">☸️ Kubernetes</text>
+  <text x="25" y="204" font-family="Arial, sans-serif" font-size="8" fill="#623ce4">🏗️ Terraform</text>
+  
+  <!-- Status Indicators -->
+  <rect x="280" y="60" width="100" height="50" fill="#10b981" opacity="0.1" rx="6"/>
+  <text x="285" y="75" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#10b981">🟢 ALL SYSTEMS</text>
+  <text x="285" y="87" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#10b981">OPERATIONAL</text>
+  <text x="285" y="99" font-family="Arial, sans-serif" font-size="8" fill="#059669">Last Deploy: 2min ago</text>
+  
+  <!-- CloudSecure Logo -->
+  <circle cx="350" cy="200" r="15" fill="#1f2937"/>
+  <text x="343" y="205" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white">CS</text>
+</svg>

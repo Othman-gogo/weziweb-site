@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600"><rect width="100%" height="100%" fill="#1d4ed8"/><text x="50%" y="50%" fill="white" font-size="64" font-family="Poppins, Arial" text-anchor="middle" dominant-baseline="middle">FitLife Case 2</text></svg>
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="250" fill="#f8fafc"/>
+  <rect x="20" y="20" width="360" height="210" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="40" y="45" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#10b981">FitLife AI Recommendations</text>
+  <rect x="40" y="60" width="150" height="80" fill="#10b981" opacity="0.1" rx="6"/>
+  <text x="50" y="80" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#10b981">🤖 Personalized Workout</text>
+  <text x="50" y="95" font-family="Arial, sans-serif" font-size="8" fill="#64748b">Based on your fitness level:</text>
+  <text x="50" y="108" font-family="Arial, sans-serif" font-size="8" fill="#64748b">• 30min HIIT session</text>
+  <text x="50" y="118" font-family="Arial, sans-serif" font-size="8" fill="#64748b">• Upper body focus</text>
+  <text x="50" y="128" font-family="Arial, sans-serif" font-size="8" fill="#64748b">• 450 cal target</text>
+  <rect x="210" y="60" width="130" height="80" fill="#0066FF" opacity="0.1" rx="6"/>
+  <text x="220" y="80" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#0066FF">📊 Progress Tracking</text>
+  <text x="220" y="95" font-family="Arial, sans-serif" font-size="8" fill="#64748b">This week:</text>
+  <text x="220" y="108" font-family="Arial, sans-serif" font-size="8" fill="#64748b">• 5 workouts completed</text>
+  <text x="220" y="118" font-family="Arial, sans-serif" font-size="8" fill="#64748b">• 2,100 calories burned</text>
+  <text x="220" y="128" font-family="Arial, sans-serif" font-size="8" fill="#64748b">• Goals achieved: 90%</text>
+  <rect x="40" y="160" width="300" height="50" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="50" y="180" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#1f2937">App Performance:</text>
+  <text x="50" y="195" font-family="Arial, sans-serif" font-size="8" fill="#10b981">50K+ downloads • 4.8⭐ rating • 85% retention • AI-powered recommendations</text>
+</svg>

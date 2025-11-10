@@ -1,1 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600"><rect width="100%" height="100%" fill="#16a34a"/><text x="50%" y="50%" fill="white" font-size="64" font-family="Poppins, Arial" text-anchor="middle" dominant-baseline="middle">AutoLead Case 2</text></svg>
+<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="250" fill="#f8fafc"/>
+  
+  <!-- Workflow Diagram -->
+  <rect x="30" y="30" width="340" height="190" fill="#ffffff" stroke="#e2e8f0" rx="8"/>
+  <text x="50" y="50" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f2937">AutoLead AI Workflow</text>
+  
+  <!-- Step 1 -->
+  <circle cx="80" cy="90" r="20" fill="#0066FF"/>
+  <text x="73" y="95" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white">1</text>
+  <text x="50" y="125" font-family="Arial, sans-serif" font-size="8" fill="#1f2937">Lead Capture</text>
+  <text x="45" y="135" font-family="Arial, sans-serif" font-size="7" fill="#64748b">Website, LinkedIn</text>
+  
+  <!-- Arrow 1 -->
+  <polyline points="100,90 130,90" stroke="#e2e8f0" stroke-width="2" marker-end="url(#arrowhead)"/>
+  
+  <!-- Step 2 -->
+  <circle cx="150" cy="90" r="20" fill="#00CCFF"/>
+  <text x="143" y="95" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white">2</text>
+  <text x="125" y="125" font-family="Arial, sans-serif" font-size="8" fill="#1f2937">AI Enrichment</text>
+  <text x="120" y="135" font-family="Arial, sans-serif" font-size="7" fill="#64748b">OpenAI Research</text>
+  
+  <!-- Arrow 2 -->
+  <polyline points="170,90 200,90" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Step 3 -->
+  <circle cx="220" cy="90" r="20" fill="#10b981"/>
+  <text x="213" y="95" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white">3</text>
+  <text x="200" y="125" font-family="Arial, sans-serif" font-size="8" fill="#1f2937">Lead Scoring</text>
+  <text x="195" y="135" font-family="Arial, sans-serif" font-size="7" fill="#64748b">AI Algorithm</text>
+  
+  <!-- Arrow 3 -->
+  <polyline points="240,90 270,90" stroke="#e2e8f0" stroke-width="2"/>
+  
+  <!-- Step 4 -->
+  <circle cx="290" cy="90" r="20" fill="#f59e0b"/>
+  <text x="283" y="95" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="white">4</text>
+  <text x="270" y="125" font-family="Arial, sans-serif" font-size="8" fill="#1f2937">CRM Sync</text>
+  <text x="265" y="135" font-family="Arial, sans-serif" font-size="7" fill="#64748b">HubSpot Auto</text>
+  
+  <!-- Results Box -->
+  <rect x="50" y="160" width="280" height="40" fill="#f8fafc" stroke="#10b981" rx="6"/>
+  <text x="60" y="175" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#10b981">Results:</text>
+  <text x="60" y="185" font-family="Arial, sans-serif" font-size="8" fill="#64748b">300% more qualified leads • 70% less manual work • 15x ROI</text>
+  <text x="60" y="195" font-family="Arial, sans-serif" font-size="8" fill="#64748b">Automated lead scoring and follow-up sequences</text>
+  
+  <!-- Define arrow marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e2e8f0"/>
+    </marker>
+  </defs>
+</svg>
