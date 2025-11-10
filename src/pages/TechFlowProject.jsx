@@ -6,10 +6,11 @@ import TechFlowDemo from '../components/TechFlowDemo'
 const TechFlowProject = () => {
   
   const handleNavigation = (section) => {
+    const baseUrl = import.meta.env.BASE_URL || '/'
     if (section === '') {
-      window.location.href = '/'
+      window.location.href = baseUrl
     } else {
-      window.location.href = '/#' + section
+      window.location.href = baseUrl + '#' + section
     }
   }
 
@@ -124,7 +125,10 @@ const TechFlowProject = () => {
             transition={{ duration: 0.6 }}
           >
             <button 
-              onClick={() => window.location.href = '/#portfolio'}
+              onClick={() => {
+                const baseUrl = import.meta.env.BASE_URL || '/'
+                window.location.href = baseUrl + '#portfolio'
+              }}
               className="flex items-center space-x-2 mb-8 text-white/80 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -249,7 +253,10 @@ const TechFlowProject = () => {
             Let's create a powerful e-commerce solution that drives your business growth.
           </p>
           <button 
-            onClick={() => window.location.href = '/#consultation'}
+            onClick={() => {
+              const baseUrl = import.meta.env.BASE_URL || '/'
+              window.location.href = baseUrl + '#consultation'
+            }}
             className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
           >
             Start Your Project

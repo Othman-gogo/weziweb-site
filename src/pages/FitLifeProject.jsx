@@ -8,10 +8,11 @@ const FitLifeProject = () => {
   const [currentScreen, setCurrentScreen] = useState('cover')
   
   const handleNavigation = (section) => {
+    const baseUrl = import.meta.env.BASE_URL || '/'
     if (section === '') {
-      window.location.href = '/'
+      window.location.href = baseUrl
     } else {
-      window.location.href = '/#' + section
+      window.location.href = baseUrl + '#' + section
     }
   }
 
@@ -135,7 +136,10 @@ const FitLifeProject = () => {
             transition={{ duration: 0.6 }}
           >
             <button 
-              onClick={() => window.location.href = '/#portfolio'}
+              onClick={() => {
+                const baseUrl = import.meta.env.BASE_URL || '/'
+                window.location.href = baseUrl + '#portfolio'
+              }}
               className="flex items-center space-x-2 mb-8 text-white/80 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -354,7 +358,10 @@ const FitLifeProject = () => {
             Let's create a powerful mobile solution that engages users and drives your business forward.
           </p>
           <button 
-            onClick={() => window.location.href = '/#consultation'}
+            onClick={() => {
+              const baseUrl = import.meta.env.BASE_URL || '/'
+              window.location.href = baseUrl + '#consultation'
+            }}
             className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors"
           >
             Start Your Project
