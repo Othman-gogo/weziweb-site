@@ -354,13 +354,14 @@ const Portfolio = () => {
               {[...filteredProjects, ...filteredProjects, ...filteredProjects].map((project, index) => (
                 <div key={`${project.id}-${index}`} className="flex-shrink-0 w-80 mx-3">
                   <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 h-full">
-                    <div className="relative overflow-hidden h-48 bg-gradient-to-br from-blue-500 via-purple-600 to-green-500 flex items-center justify-center">
-                      <div className="text-white text-center">
+                    <div className="relative overflow-hidden h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center border-b">
+                      <div className="text-center">
                         <div className="text-4xl mb-2">{getProjectIcon(project.id)}</div>
-                        <div className="text-lg font-semibold">{project.title.split(' ')[0]}</div>
+                        <div className="text-lg font-semibold text-gray-900">{project.title.split(' ')[0]}</div>
+                        <div className="text-sm text-gray-600 mt-1">{project.type}</div>
                       </div>
-                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-700">
-                        {project.type}
+                      <div className="absolute top-4 right-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                        {project.results[0]?.split(':')[1]?.trim() || 'Success'}
                       </div>
                     </div>
                     <div className="p-6">
@@ -414,15 +415,15 @@ const Portfolio = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500"
             >
-              {/* Project Image */}
-              <div className="relative overflow-hidden h-48 bg-gradient-to-br from-blue-500 via-purple-600 to-green-500 flex items-center justify-center">
-                <div className="text-white text-center">
+              {/* Project Header - No Images */}
+              <div className="relative overflow-hidden h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center border-b">
+                <div className="text-center">
                   <div className="text-6xl mb-3">{getProjectIcon(project.id)}</div>
-                  <div className="text-xl font-bold">{project.title.split(' ')[0]}</div>
-                  <div className="text-sm opacity-90">{project.type}</div>
+                  <div className="text-2xl font-bold text-gray-900">{project.title.split(' ')[0]}</div>
+                  <div className="text-sm text-gray-600 mt-1">{project.type}</div>
                 </div>
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-700">
-                  {project.impact}
+                <div className="absolute top-4 right-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                  {project.results[0]?.split(':')[1]?.trim() || 'Success'}
                 </div>
               </div>
 

@@ -128,7 +128,11 @@ const FitLifeProject = () => {
             {screens.map((screen) => (
               <button
                 key={screen.id}
-                onClick={() => setCurrentScreen(screen.id)}
+                onClick={() => {
+                  setCurrentScreen(screen.id)
+                  // Trigger a re-render of the demo component
+                  window.dispatchEvent(new CustomEvent('fitlife-screen-change', { detail: screen.id }))
+                }}
                 className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                   currentScreen === screen.id
                     ? 'bg-green-600 text-white shadow-lg'
@@ -146,7 +150,7 @@ const FitLifeProject = () => {
               {/* Phone Frame */}
               <div className="relative w-80 h-[640px] bg-gray-900 rounded-[3rem] p-4 shadow-2xl">
                 <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
-                  <FitLifeDemo currentScreen={currentScreen} onScreenChange={setCurrentScreen} />
+                  <FitLifeDemo />
                 </div>
                 
                 {/* Phone Details */}

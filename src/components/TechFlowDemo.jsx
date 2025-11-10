@@ -435,12 +435,27 @@ const TechFlowDemo = () => {
             </div>
             
             <div className="flex items-center space-x-4">
-              <button className="p-2 text-gray-400 hover:text-gray-600">
-                <Search className="w-5 h-5" />
-              </button>
-              <button className="p-2 text-gray-400 hover:text-gray-600">
-                <User className="w-5 h-5" />
-              </button>
+              <div className="relative">
+                <input 
+                  type="text"
+                  placeholder="Search products..."
+                  className="w-64 pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+                <Search className="w-5 h-5 text-gray-400 absolute left-3 top-2.5" />
+              </div>
+              <div className="relative">
+                <button className="p-2 text-gray-400 hover:text-gray-600 flex items-center space-x-2">
+                  <User className="w-5 h-5" />
+                  <span className="text-sm">Account</span>
+                </button>
+                <div className="absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg border hidden group-hover:block">
+                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">My Profile</a>
+                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Orders</a>
+                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+                  <div className="border-t"></div>
+                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign Out</a>
+                </div>
+              </div>
               <button 
                 onClick={() => setCurrentView('cart')}
                 className="p-2 text-gray-400 hover:text-gray-600 relative"
