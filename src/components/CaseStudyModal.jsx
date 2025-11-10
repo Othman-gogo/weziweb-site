@@ -58,12 +58,12 @@ const CaseStudyModal = ({ isOpen, onClose, caseStudy }) => {
                 <div className="p-8">
                   <div className="md:grid md:grid-cols-2 gap-4 hidden">
                     {caseStudy.gallery.map((src, i) => (
-                      <img key={i} src={src} alt={`${caseStudy.title} ${i+1}`} className="w-full h-64 object-cover rounded-xl" />
+                      <img key={i} src={(src && src.startsWith('/')) ? `${import.meta.env.BASE_URL}${src.slice(1)}` : src} alt={`${caseStudy.title} ${i+1}`} className="w-full h-64 object-cover rounded-xl" />
                     ))}
                   </div>
                   <div className="md:hidden overflow-x-auto flex gap-4 pb-2">
                     {caseStudy.gallery.map((src, i) => (
-                      <img key={i} src={src} alt={`${caseStudy.title} ${i+1}`} className="w-72 h-44 object-cover rounded-xl flex-shrink-0" />
+                      <img key={i} src={(src && src.startsWith('/')) ? `${import.meta.env.BASE_URL}${src.slice(1)}` : src} alt={`${caseStudy.title} ${i+1}`} className="w-72 h-44 object-cover rounded-xl flex-shrink-0" />
                     ))}
                   </div>
                 </div>

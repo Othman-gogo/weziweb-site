@@ -278,6 +278,8 @@ const Portfolio = () => {
     ? baseProjects 
     : baseProjects.filter(project => project.category === activeFilter)
 
+  const resolveAsset = (p) => (p && p.startsWith('/')) ? `${import.meta.env.BASE_URL}${p.slice(1)}` : p
+
   return (
     <section id="portfolio" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
