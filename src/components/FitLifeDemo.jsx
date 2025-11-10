@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Heart, TrendingUp, Users, Star, Play, Target, Calendar } from 'lucide-react'
 
 const FitLifeDemo = () => {

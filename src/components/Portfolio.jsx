@@ -353,14 +353,14 @@ const Portfolio = () => {
               {filteredProjects.map((project, index) => (
                 <div key={project.id} className="flex-shrink-0 w-80" style={{scrollSnapAlign: 'start'}}>
                   <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 h-full">
-                    <div className="relative overflow-hidden h-48">
-                      {project.image && (
-                        <img src={resolveAsset(project.image)} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
-                      )}
-                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-700">
-                        {project.type}
+                    <div className="relative overflow-hidden h-48 bg-gradient-to-br from-blue-500 via-purple-600 to-green-500 flex items-center justify-center">
+                      <div className="text-white text-center">
+                        <div className="text-4xl mb-2">{getProjectIcon(project.id)}</div>
+                        <div className="text-lg font-semibold">{project.title.split(' ')[0]}</div>
                       </div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                      <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-white">
+                        {project.results[0]?.split(':')[1]?.trim() || 'Success'}
+                      </div>
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-display font-semibold text-gray-900 mb-3 group-hover:text-wezi-blue-500 transition-colors duration-300 line-clamp-2">
@@ -413,18 +413,15 @@ const Portfolio = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500"
             >
-              {/* Project Image */}
-              <div className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-green-50 h-48">
-                {project.image && (
-                  <img src={resolveAsset(project.image)} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
-                )}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-20 h-20 bg-wezi-gradient rounded-2xl flex items-center justify-center">
-                    <Play className="w-8 h-8 text-white" />
-                  </div>
+              {/* Project Header - Beautiful Icons & Gradients */}
+              <div className="relative overflow-hidden h-48 bg-gradient-to-br from-blue-500 via-purple-600 to-green-500 flex items-center justify-center">
+                <div className="text-white text-center">
+                  <div className="text-6xl mb-3">{getProjectIcon(project.id)}</div>
+                  <div className="text-2xl font-bold">{project.title.split(' ')[0]}</div>
+                  <div className="text-sm opacity-90">{project.type}</div>
                 </div>
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-700">
-                  {project.type}
+                <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-white">
+                  {project.results[0]?.split(':')[1]?.trim() || 'Success'}
                 </div>
               </div>
 
