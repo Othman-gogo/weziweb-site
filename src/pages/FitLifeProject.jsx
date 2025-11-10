@@ -3,18 +3,10 @@ import { motion } from 'framer-motion'
 import { ArrowLeft, Smartphone, Heart, TrendingUp, Users, Star, Download, Play } from 'lucide-react'
 
 import FitLifeDemo from '../components/FitLifeDemo'
+import ProjectNavbar from '../components/ProjectNavbar'
 
 const FitLifeProject = () => {
   const [currentScreen, setCurrentScreen] = useState('cover')
-  
-  const handleNavigation = (section) => {
-    const baseUrl = import.meta.env.BASE_URL || '/'
-    if (section === '') {
-      window.location.href = baseUrl
-    } else {
-      window.location.href = baseUrl + '#' + section
-    }
-  }
 
   const features = [
     {
@@ -77,55 +69,7 @@ const FitLifeProject = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation Header */}
-      <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div 
-              onClick={() => handleNavigation('')}
-              className="text-2xl font-bold bg-wezi-gradient bg-clip-text text-transparent cursor-pointer"
-            >
-              WeziWeb
-            </div>
-            
-            <div className="hidden md:flex items-center space-x-8">
-              <button 
-                onClick={() => handleNavigation('services')}
-                className="text-gray-700 hover:text-wezi-blue-500 transition-colors"
-              >
-                Services
-              </button>
-              <button 
-                onClick={() => handleNavigation('about')}
-                className="text-gray-700 hover:text-wezi-blue-500 transition-colors"
-              >
-                About
-              </button>
-              <button 
-                onClick={() => handleNavigation('portfolio')}
-                className="text-gray-700 hover:text-wezi-blue-500 transition-colors"
-              >
-                Portfolio
-              </button>
-              <button 
-                onClick={() => handleNavigation('consultation')}
-                className="bg-wezi-gradient text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity"
-              >
-                Book Consultation
-              </button>
-            </div>
-            
-            {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button 
-                onClick={() => handleNavigation('')}
-                className="text-gray-700 hover:text-wezi-blue-500"
-              >
-                ☰ Menu
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <ProjectNavbar />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-600 to-blue-700 text-white py-20">
@@ -137,8 +81,9 @@ const FitLifeProject = () => {
           >
             <button 
               onClick={() => {
+                sessionStorage.setItem('scrollToSection', 'portfolio')
                 const baseUrl = import.meta.env.BASE_URL || '/'
-                window.location.href = baseUrl + '#portfolio'
+                window.location.href = baseUrl
               }}
               className="flex items-center space-x-2 mb-8 text-white/80 hover:text-white transition-colors"
             >
