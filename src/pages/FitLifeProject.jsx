@@ -304,8 +304,9 @@ const FitLifeProject = () => {
           </p>
           <button 
             onClick={() => {
+              sessionStorage.setItem('scrollToSection', 'consultation')
               const baseUrl = import.meta.env.BASE_URL || '/'
-              window.location.href = baseUrl + '#consultation'
+              window.location.href = baseUrl
             }}
             className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors"
           >
