@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import { Heart, TrendingUp, Users, Star, Play, Target, Calendar } from 'lucide-react'
 
-const FitLifeDemo = () => {
-  const [currentScreen, setCurrentScreen] = useState('cover')
+const FitLifeDemo = ({ currentScreen: externalScreen }) => {
+  const [internalScreen, setInternalScreen] = useState('cover')
+  
+  // Use external screen if provided, otherwise use internal state
+  const currentScreen = externalScreen || internalScreen
 
   // Listen for external screen changes
   React.useEffect(() => {
     const handleScreenChange = (event) => {
       if (event.detail) {
-        setCurrentScreen(event.detail)
+        setInternalScreen(event.detail)
       }
     }
     

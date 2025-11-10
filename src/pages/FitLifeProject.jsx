@@ -57,15 +57,13 @@ const FitLifeProject = () => {
   ]
 
   const screens = [
-    { id: 'cover', name: 'Welcome', component: Cover },
-    { id: 'dashboard', name: 'Dashboard', component: Dashboard },
-    { id: 'workout', name: 'Workout', component: WorkoutPlayer },
-    { id: 'progress', name: 'Progress', component: Progress },
-    { id: 'profile', name: 'Profile', component: Profile },
-    { id: 'plan', name: 'Plan', component: Plan }
+    { id: 'cover', name: 'Welcome' },
+    { id: 'dashboard', name: 'Dashboard' },
+    { id: 'workout', name: 'Workout' },
+    { id: 'progress', name: 'Progress' },
+    { id: 'profile', name: 'Profile' },
+    { id: 'plan', name: 'Plan' }
   ]
-
-  const CurrentComponent = screens.find(screen => screen.id === currentScreen)?.component
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -150,7 +148,7 @@ const FitLifeProject = () => {
               {/* Phone Frame */}
               <div className="relative w-80 h-[640px] bg-gray-900 rounded-[3rem] p-4 shadow-2xl">
                 <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
-                  <FitLifeDemo />
+                  <FitLifeDemo currentScreen={currentScreen} />
                 </div>
                 
                 {/* Phone Details */}
