@@ -11,7 +11,6 @@ import EnhancedHero from './components/enhanced/EnhancedHero'
 import EnhancedConsultation from './components/enhanced/EnhancedConsultation'
 import SimpleBrandedChatbot from './components/enhanced/SimpleBrandedChatbot'
 import { ChatbotProvider } from './components/enhanced/ChatbotProvider'
-import LeadsAdmin from './components/enhanced/LeadsAdmin'
 
 // Original Components
 import Navbar from './components/Navbar'
@@ -119,9 +118,6 @@ function App() {
           
           {/* Floating AI Chatbot */}
           <SimpleBrandedChatbot />
-          
-          {/* Leads Admin Panel */}
-          <LeadsAdmin />
           
           {/* Scroll to top functionality */}
           <ScrollToTopButton />

@@ -12,7 +12,7 @@ const TechFlowDemo = () => {
       name: "MacBook Pro 14\"",
       price: 1999,
       originalPrice: 2199,
-      image: "/api/placeholder/300/200",
+      image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=300&fit=crop",
       rating: 4.8,
       reviews: 1234,
       inStock: true,
@@ -22,7 +22,7 @@ const TechFlowDemo = () => {
       id: 2, 
       name: "iPhone 15 Pro",
       price: 999,
-      image: "/api/placeholder/300/200",
+      image: "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&h=300&fit=crop",
       rating: 4.9,
       reviews: 2341,
       inStock: true,
@@ -33,11 +33,42 @@ const TechFlowDemo = () => {
       name: "AirPods Pro",
       price: 249,
       originalPrice: 299,
-      image: "/api/placeholder/300/200", 
+      image: "https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?w=400&h=300&fit=crop", 
       rating: 4.7,
       reviews: 892,
       inStock: false,
       category: "Audio"
+    },
+    {
+      id: 4,
+      name: "iPad Pro 12.9\"",
+      price: 1099,
+      image: "https://images.unsplash.com/photo-1585790050230-5dd28404ccb9?w=400&h=300&fit=crop",
+      rating: 4.6,
+      reviews: 567,
+      inStock: true,
+      category: "Tablets"
+    },
+    {
+      id: 5,
+      name: "Apple Watch Ultra",
+      price: 799,
+      image: "https://images.unsplash.com/photo-1579586337278-3f436f25d4d6?w=400&h=300&fit=crop",
+      rating: 4.5,
+      reviews: 423,
+      inStock: true,
+      category: "Wearables"
+    },
+    {
+      id: 6,
+      name: "Gaming Headset",
+      price: 149,
+      originalPrice: 199,
+      image: "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&h=300&fit=crop",
+      rating: 4.4,
+      reviews: 234,
+      inStock: true,
+      category: "Gaming"
     }
   ]
 
@@ -63,8 +94,19 @@ const TechFlowDemo = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map((product) => (
           <div key={product.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div className="h-48 bg-gray-200 flex items-center justify-center">
-              <span className="text-gray-500">Product Image</span>
+            <div className="h-48 bg-gray-200 overflow-hidden">
+              <img 
+                src={product.image} 
+                alt={product.name}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  e.target.style.display = 'none'
+                  e.target.nextSibling.style.display = 'flex'
+                }}
+              />
+              <div className="w-full h-full bg-gray-200 flex items-center justify-center" style={{display: 'none'}}>
+                <span className="text-gray-500">{product.category}</span>
+              </div>
             </div>
             <div className="p-4">
               <span className="text-sm text-blue-600 font-medium">{product.category}</span>
@@ -119,8 +161,19 @@ const TechFlowDemo = () => {
       
       {selectedProduct && (
         <div className="grid lg:grid-cols-2 gap-8">
-          <div className="h-96 bg-gray-200 rounded-lg flex items-center justify-center">
-            <span className="text-gray-500">Product Image</span>
+          <div className="h-96 bg-gray-200 rounded-lg overflow-hidden">
+            <img 
+              src={selectedProduct.image} 
+              alt={selectedProduct.name}
+              className="w-full h-full object-cover"
+              onError={(e) => {
+                e.target.style.display = 'none'
+                e.target.nextSibling.style.display = 'flex'
+              }}
+            />
+            <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center" style={{display: 'none'}}>
+              <span className="text-gray-500">Product Image</span>
+            </div>
           </div>
           
           <div className="space-y-6">
@@ -190,8 +243,19 @@ const TechFlowDemo = () => {
           {cartItems.map((item) => (
             <div key={item.cartId} className="flex items-center justify-between p-4 bg-white rounded-lg shadow">
               <div className="flex items-center space-x-4">
-                <div className="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center">
-                  <span className="text-xs text-gray-500">IMG</span>
+                <div className="w-16 h-16 bg-gray-200 rounded-lg overflow-hidden">
+                  <img 
+                    src={item.image} 
+                    alt={item.name}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      e.target.style.display = 'none'
+                      e.target.nextSibling.style.display = 'flex'
+                    }}
+                  />
+                  <div className="w-full h-full bg-gray-200 rounded-lg flex items-center justify-center" style={{display: 'none'}}>
+                    <span className="text-xs text-gray-500">IMG</span>
+                  </div>
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">{item.name}</h3>
