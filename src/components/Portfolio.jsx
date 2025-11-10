@@ -263,6 +263,16 @@ const Portfolio = () => {
     setSelectedCaseStudy(null)
   }
 
+  const handleViewProject = (project) => {
+    if (project.id === 1) {
+      // TechFlow E-commerce Platform
+      window.open('#/projects/techflow', '_blank')
+    } else if (project.id === 3) {
+      // FitLife Mobile App
+      window.open('#/projects/fitlife', '_blank')
+    }
+  }
+
   // Map real images and galleries to projects
   const imageMap = {
     1: { image: "/portfolio/techflow-1.svg", gallery: ["/portfolio/techflow-1.svg", "/portfolio/techflow-2.svg", "/portfolio/techflow-3.svg"] },
@@ -324,42 +334,61 @@ const Portfolio = () => {
           ))}
         </motion.div>
 
-        {/* Mobile Carousel */}
+        {/* Mobile Carousel - Professional Infinite Loop */}
         <div className="md:hidden mb-8">
-          <Carousel
-            items={filteredProjects}
-            renderItem={(project) => (
-              <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 mx-2">
-                <div className="relative overflow-hidden h-48">
-                  {project.image && (
-                    <img src={resolveAsset(project.image)} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
-                  )}
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-700">
-                    {project.type}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-display font-semibold text-gray-900 mb-3 group-hover:text-wezi-blue-500 transition-colors duration-300">{project.title}</h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Results:</h4>
-                    <div className="space-y-1">
-                      {project.results.map((result, resultIndex) => (
-                        <div key={resultIndex} className="flex items-center space-x-2 text-sm text-gray-600">
-                          <div className="w-1.5 h-1.5 bg-wezi-green-500 rounded-full"></div>
-                          <span>{result}</span>
+          <div className="overflow-hidden">
+            <div className="flex animate-scroll-infinite">
+              {/* Triple the projects for seamless infinite scroll */}
+              {[...filteredProjects, ...filteredProjects, ...filteredProjects].map((project, index) => (
+                <div key={`${project.id}-${index}`} className="flex-shrink-0 w-80 mx-3">
+                  <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-500 h-full">
+                    <div className="relative overflow-hidden h-48">
+                      {project.image && (
+                        <img src={resolveAsset(project.image)} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+                      )}
+                      <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-700">
+                        {project.type}
+                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-xl font-display font-semibold text-gray-900 mb-3 group-hover:text-wezi-blue-500 transition-colors duration-300 line-clamp-2">
+                        {project.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4 leading-relaxed line-clamp-3">{project.description}</p>
+                      <div className="mb-4">
+                        <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Results:</h4>
+                        <div className="space-y-1">
+                          {project.results.slice(0, 2).map((result, resultIndex) => (
+                            <div key={resultIndex} className="flex items-center space-x-2 text-sm text-gray-600">
+                              <div className="w-1.5 h-1.5 bg-wezi-green-500 rounded-full"></div>
+                              <span className="line-clamp-1">{result}</span>
+                            </div>
+                          ))}
                         </div>
-                      ))}
+                      </div>
+                      <div className="flex gap-2 mb-4">
+                        <button 
+                          onClick={() => handleViewCaseStudy(project)} 
+                          className="flex-1 bg-gray-50 hover:bg-wezi-gradient hover:text-white text-gray-700 py-2 px-3 rounded-lg font-medium transition-all duration-300 text-sm"
+                        >
+                          Case Study
+                        </button>
+                        {(project.id === 1 || project.id === 3) && (
+                          <button 
+                            onClick={() => handleViewProject(project)} 
+                            className="flex-1 bg-wezi-gradient text-white py-2 px-3 rounded-lg font-medium transition-all duration-300 text-sm hover:opacity-90"
+                          >
+                            View Project
+                          </button>
+                        )}
+                      </div>
                     </div>
                   </div>
-                  <button onClick={() => handleViewCaseStudy(project)} className="w-full bg-gray-50 hover:bg-wezi-gradient hover:text-white text-gray-700 py-3 px-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2 group">
-                    <span>View Case Study</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-                  </button>
                 </div>
-              </div>
-            )}
-          />
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* Desktop Grid */}

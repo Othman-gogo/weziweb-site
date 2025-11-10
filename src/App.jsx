@@ -22,6 +22,10 @@ import Consultation from './components/Consultation'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
+// Project Pages
+import TechFlowProject from './pages/TechFlowProject'
+import FitLifeProject from './pages/FitLifeProject'
+
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger)
 
@@ -101,7 +105,11 @@ function App() {
               </main>
             } />
             
-            {/* Additional routes can be added here */}
+            {/* Project Showcase Routes */}
+            <Route path="/projects/techflow" element={<TechFlowProject />} />
+            <Route path="/projects/fitlife" element={<FitLifeProject />} />
+            
+            {/* Additional routes */}
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
