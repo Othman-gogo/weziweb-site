@@ -75,42 +75,40 @@ function App() {
             <Route path="/" element={
               <main>
                 {/* Enhanced Hero Section */}
-                <EnhancedHero />
+                <section id="home">
+                  <EnhancedHero />
+                </section>
                 
                 {/* Services Section with GSAP classes */}
-                <div className="services-section">
+                <section id="services" className="services-section">
                   <Services />
-                </div>
+                </section>
                 
                 {/* About Section */}
-                <div className="about-section">
+                <section id="about" className="about-section">
                   <About />
-                </div>
+                </section>
                 
                 {/* Portfolio Section with GSAP classes */}
-                <div className="portfolio-section">
+                <section id="portfolio" className="portfolio-section">
                   <Portfolio />
-                </div>
+                </section>
                 
                 {/* Consultation Section */}
-                <div className="consultation-section">
+                <section id="consultation" className="consultation-section">
                   <Consultation />
-                </div>
+                </section>
                 
                 {/* Contact Section */}
-                <div className="contact-section">
+                <section id="contact" className="contact-section">
                   <Contact />
-                </div>
+                </section>
               </main>
             } />
             
-            {/* Project Showcase Routes */}
+            {/* Project Showcase Routes - Only these use separate pages */}
             <Route path="/projects/techflow" element={<TechFlowProject />} />
             <Route path="/projects/fitlife" element={<FitLifeProject />} />
-            
-            {/* Additional routes */}
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/contact" element={<Contact />} />
           </Routes>
           
           {/* Footer */}

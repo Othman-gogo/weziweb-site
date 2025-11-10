@@ -8,13 +8,10 @@ const FitLifeProject = () => {
   const [currentScreen, setCurrentScreen] = useState('cover')
   
   const handleNavigation = (section) => {
-    // Get the base URL without the hash
-    const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '/')
-    
     if (section === '') {
-      window.location.href = baseUrl
+      window.location.href = '/'
     } else {
-      window.location.href = baseUrl + '#' + section
+      window.location.href = '/#' + section
     }
   }
 
@@ -138,10 +135,7 @@ const FitLifeProject = () => {
             transition={{ duration: 0.6 }}
           >
             <button 
-              onClick={() => {
-                const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '/')
-                window.location.href = baseUrl + '#portfolio'
-              }}
+              onClick={() => window.location.href = '/#portfolio'}
               className="flex items-center space-x-2 mb-8 text-white/80 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
