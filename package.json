@@ -29,8 +29,7 @@
     "react-hot-toast": "^2.6.0",
     "react-intersection-observer": "^10.0.0",
     "react-router-dom": "^6.8.1",
-    "tsparticles": "^3.9.1",
-    "typewriter-effect": "^2.22.0"
+        "typewriter-effect": "^2.22.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
