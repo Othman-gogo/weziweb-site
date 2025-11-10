@@ -6,6 +6,10 @@ import FitLifeDemo from '../components/FitLifeDemo'
 
 const FitLifeProject = () => {
   const [currentScreen, setCurrentScreen] = useState('cover')
+  
+  const handleNavigation = (section) => {
+    window.location.href = `/#${section}`
+  }
 
   const features = [
     {
@@ -67,6 +71,57 @@ const FitLifeProject = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Navigation Header */}
+      <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            <div 
+              onClick={() => handleNavigation('')}
+              className="text-2xl font-bold bg-wezi-gradient bg-clip-text text-transparent cursor-pointer"
+            >
+              WeziWeb
+            </div>
+            
+            <div className="hidden md:flex items-center space-x-8">
+              <button 
+                onClick={() => handleNavigation('services')}
+                className="text-gray-700 hover:text-wezi-blue-500 transition-colors"
+              >
+                Services
+              </button>
+              <button 
+                onClick={() => handleNavigation('about')}
+                className="text-gray-700 hover:text-wezi-blue-500 transition-colors"
+              >
+                About
+              </button>
+              <button 
+                onClick={() => handleNavigation('portfolio')}
+                className="text-gray-700 hover:text-wezi-blue-500 transition-colors"
+              >
+                Portfolio
+              </button>
+              <button 
+                onClick={() => handleNavigation('consultation')}
+                className="bg-wezi-gradient text-white px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity"
+              >
+                Book Consultation
+              </button>
+            </div>
+            
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button 
+                onClick={() => handleNavigation('')}
+                className="text-gray-700 hover:text-wezi-blue-500"
+              >
+                ☰ Menu
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-600 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,7 +131,7 @@ const FitLifeProject = () => {
             transition={{ duration: 0.6 }}
           >
             <button 
-              onClick={() => window.close()}
+              onClick={() => window.location.href = '/#portfolio'}
               className="flex items-center space-x-2 mb-8 text-white/80 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
@@ -294,7 +349,10 @@ const FitLifeProject = () => {
           <p className="text-xl text-green-100 mb-8">
             Let's create a powerful mobile solution that engages users and drives your business forward.
           </p>
-          <button className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors">
+          <button 
+            onClick={() => window.location.href = '/#consultation'}
+            className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-50 transition-colors"
+          >
             Start Your Project
           </button>
         </div>
