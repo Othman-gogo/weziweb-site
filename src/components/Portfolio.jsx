@@ -376,7 +376,7 @@ const Portfolio = () => {
               {/* Project Image */}
               <div className="relative overflow-hidden bg-gradient-to-br from-blue-50 to-green-50 h-48">
                 {project.image && (
-                  <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
+                  <img src={resolveAsset(project.image)} alt={project.title} className="absolute inset-0 w-full h-full object-cover" />
                 )}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-20 h-20 bg-wezi-gradient rounded-2xl flex items-center justify-center">
