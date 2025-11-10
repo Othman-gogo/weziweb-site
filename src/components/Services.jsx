@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import Carousel from './Carousel'
 import { Bot, Workflow, BarChart3, Zap, Globe, Users, Clock, Target, Code, Smartphone, Database, Shield } from 'lucide-react'
 
 const Services = () => {
@@ -78,7 +79,33 @@ const Services = () => {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+{/* Mobile Carousel */}
+<div className="md:hidden mb-20">
+  <Carousel
+    items={services}
+    renderItem={(service) => (
+      <div className="group px-2">
+        <div className="relative p-8 bg-white rounded-2xl border border-gray-100 hover:border-transparent hover:shadow-2xl transition-all duration-500 h-full">
+          <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center text-white mb-6`}>
+            {service.icon}
+          </div>
+          <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900">{service.title}</h3>
+          <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
+          <ul className="space-y-2">
+            {service.features.map((feature, featureIndex) => (
+              <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-700">
+                <div className="w-2 h-2 bg-wezi-gradient rounded-full"></div>
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    )}
+  />
+</div>
+{/* Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           {services.map((service, index) => (
             <motion.div
               key={index}
