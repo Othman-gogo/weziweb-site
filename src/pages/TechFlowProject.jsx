@@ -1,26 +1,9 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowLeft, ShoppingCart, Search, User, Star, TrendingUp, Shield, Zap } from 'lucide-react'
-import { Header } from '../projects/techflow/components/Header'
-import { StoreFront } from '../projects/techflow/components/StoreFront'
-import { ProductDetail } from '../projects/techflow/components/ProductDetail'
-import { Cart } from '../projects/techflow/components/Cart'
-import { Checkout } from '../projects/techflow/components/Checkout'
-import { AdminDashboard } from '../projects/techflow/components/AdminDashboard'
+import TechFlowDemo from '../components/TechFlowDemo'
 
 const TechFlowProject = () => {
-  const [currentView, setCurrentView] = useState('store')
-  const [selectedProductId, setSelectedProductId] = useState(null)
-
-  const handleViewProduct = (productId) => {
-    setSelectedProductId(productId)
-    setCurrentView('product')
-  }
-
-  const handleBackToStore = () => {
-    setCurrentView('store')
-    setSelectedProductId(null)
-  }
 
   const features = [
     {
@@ -130,31 +113,7 @@ const TechFlowProject = () => {
           {/* Demo Container */}
           <div className="bg-gray-100 rounded-2xl p-8 shadow-2xl">
             <div className="bg-white rounded-xl overflow-hidden shadow-lg">
-              <Header 
-                currentView={currentView} 
-                onNavigate={setCurrentView}
-              />
-              
-              <main className="min-h-[600px]">
-                {currentView === 'store' && (
-                  <StoreFront onViewProduct={handleViewProduct} />
-                )}
-                {currentView === 'product' && selectedProductId && (
-                  <ProductDetail 
-                    productId={selectedProductId}
-                    onBack={handleBackToStore}
-                  />
-                )}
-                {currentView === 'cart' && (
-                  <Cart onNavigate={setCurrentView} />
-                )}
-                {currentView === 'checkout' && (
-                  <Checkout onNavigate={setCurrentView} />
-                )}
-                {currentView === 'admin' && (
-                  <AdminDashboard />
-                )}
-              </main>
+              <TechFlowDemo />
             </div>
           </div>
         </div>
@@ -214,7 +173,7 @@ const TechFlowProject = () => {
                 className={`px-6 py-3 rounded-full font-medium ${tech.color}`}
               >
                 <span className="font-semibold">{tech.name}</span>
-                <span className="text-sm ml-2 opacity-75">({tech category})</span>
+                <span className="text-sm ml-2 opacity-75">({tech.category})</span>
               </motion.div>
             ))}
           </div>

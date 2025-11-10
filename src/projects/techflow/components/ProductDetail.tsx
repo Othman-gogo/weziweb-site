@@ -6,7 +6,7 @@ import { Separator } from './ui/separator';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { products } from '../lib/store';
 import { useStore } from '../hooks/useStore';
-import { toast } from 'sonner@2.0.3';
+import { toast } from "sonner"
 
 interface ProductDetailProps {
   productId: string;

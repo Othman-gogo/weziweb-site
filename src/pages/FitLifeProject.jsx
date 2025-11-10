@@ -2,13 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowLeft, Smartphone, Heart, TrendingUp, Users, Star, Download, Play } from 'lucide-react'
 
-// Import FitLife components
-import { Cover } from '../projects/fitlife/fitlife/cover'
-import { Dashboard } from '../projects/fitlife/fitlife/dashboard'
-import { WorkoutPlayer } from '../projects/fitlife/fitlife/workout-player'
-import { Profile } from '../projects/fitlife/fitlife/profile'
-import { Progress } from '../projects/fitlife/fitlife/progress'
-import { Plan } from '../projects/fitlife/fitlife/plan'
+import FitLifeDemo from '../components/FitLifeDemo'
 
 const FitLifeProject = () => {
   const [currentScreen, setCurrentScreen] = useState('cover')
@@ -152,7 +146,7 @@ const FitLifeProject = () => {
               {/* Phone Frame */}
               <div className="relative w-80 h-[640px] bg-gray-900 rounded-[3rem] p-4 shadow-2xl">
                 <div className="w-full h-full bg-white rounded-[2.5rem] overflow-hidden">
-                  {CurrentComponent && <CurrentComponent />}
+                  <FitLifeDemo currentScreen={currentScreen} onScreenChange={setCurrentScreen} />
                 </div>
                 
                 {/* Phone Details */}

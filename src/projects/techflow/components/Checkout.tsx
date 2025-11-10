@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Separator } from './ui/separator';
 import { useStore } from '../hooks/useStore';
 import { View } from '../App';
-import { toast } from 'sonner@2.0.3';
+import { toast } from "sonner";
 
 interface CheckoutProps {
   onNavigate: (view: View) => void;

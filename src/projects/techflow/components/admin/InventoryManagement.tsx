@@ -14,7 +14,7 @@ import {
 } from '../ui/table';
 import { products } from '../../lib/store';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
-import { toast } from 'sonner@2.0.3';
+import { toast } from "sonner";
 
 export function InventoryManagement() {
   const [searchQuery, setSearchQuery] = useState('');

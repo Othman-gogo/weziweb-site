@@ -6,7 +6,7 @@ import { Badge } from './ui/badge';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { Product } from '../types';
 import { useStore } from '../hooks/useStore';
-import { toast } from 'sonner@2.0.3';
+import { toast } from "sonner";
 
 interface ProductCardProps {
   product: Product;
