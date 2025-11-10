@@ -6,7 +6,14 @@ import TechFlowDemo from '../components/TechFlowDemo'
 const TechFlowProject = () => {
   
   const handleNavigation = (section) => {
-    window.location.href = `/#${section}`
+    // Get the base URL without the hash
+    const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '/')
+    
+    if (section === '') {
+      window.location.href = baseUrl
+    } else {
+      window.location.href = baseUrl + '#' + section
+    }
   }
 
   const features = [
@@ -120,7 +127,10 @@ const TechFlowProject = () => {
             transition={{ duration: 0.6 }}
           >
             <button 
-              onClick={() => window.location.href = '/#portfolio'}
+              onClick={() => {
+                const baseUrl = window.location.origin + window.location.pathname.replace(/\/[^\/]*$/, '/')
+                window.location.href = baseUrl + '#portfolio'
+              }}
               className="flex items-center space-x-2 mb-8 text-white/80 hover:text-white transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
