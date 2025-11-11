@@ -353,8 +353,8 @@ const Portfolio = () => {
             <div className="absolute left-0 top-0 w-8 h-full bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
             <div className="absolute right-0 top-0 w-8 h-full bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
             
-            {/* Swipe indicator */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-10">
+            {/* Swipe indicator - positioned to not interfere with buttons */}
+            <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
               <div className="bg-black/20 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
                 👈 Swipe to explore more projects 👉
               </div>

@@ -32,7 +32,7 @@ A: "Absolutely! Othman handles complete digital marketing campaigns including SE
 
 Remember: Othman DOES build websites, web apps, marketing campaigns, and automation. Always say YES to these services!`,
 
-  welcomeMessage: "Hi! I help connect people with Othman Taoufik for web development, digital marketing, and automation projects. What's your name and how can I help you today?",
+  welcomeMessage: "Hi! I'm Othman's AI assistant for WeziWeb Digital Agency. I help connect people with Othman for web development, digital marketing, and automation projects. What's your name and how can I help you today?",
   
   quickReplies: [
     "Can you build a website?",

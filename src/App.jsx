@@ -52,6 +52,21 @@ function App() {
         { opacity: 0 }, 
         { opacity: 1, duration: 0.5, ease: 'power2.out' }
       )
+      
+      // Handle scrolling to section after navigation from project pages
+      const scrollToSection = sessionStorage.getItem('scrollToSection')
+      if (scrollToSection) {
+        sessionStorage.removeItem('scrollToSection')
+        setTimeout(() => {
+          const element = document.getElementById(scrollToSection)
+          if (element) {
+            element.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            })
+          }
+        }, 1000)
+      }
     }, 100)
   }
 
